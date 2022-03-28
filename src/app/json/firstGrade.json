@@ -1,0 +1,42 @@
+{
+    "firstGrade" : [
+    {
+      "studentName" : "Joseph",
+      "age" : "9",
+      "email" : "test@xyz.com",
+      "marks": [{ "English": 95 , 
+       "Maths" : 99 ,
+       "Socialstudies" : 93 }] ,
+       "percentage": 0
+      
+    },
+    {
+      "studentName" : "John",
+      "age" : "10",
+      "email" : "test1@xyz.com",
+      "marks": [{ "English": 93 , 
+       "Maths" : 96 ,
+       "Socialstudies" : 92 }] ,
+       "percentage": 0
+    },
+    {
+      "studentName" : "Trevor",
+      "age" : "9",
+      "email" : "test2@xyz.com",
+      "marks": [{ "English": 85 , 
+       "Maths" : 36 ,
+       "Socialstudies" : 73 }] ,
+       "percentage": 0
+    },
+    {
+      "studentName" : "Sheldon",
+      "age" : "8",
+      "email" : "test3@xyz.com",
+      "marks": [{ "English": 75 , 
+       "Maths" : 68 ,
+       "Socialstudies" : 88 }],
+       "percentage": 0
+      
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+<p>pie-chart works!</p>
+<div style="display: block;">
+  <canvas baseChart 
+    [data]="pieChartData" 
+    [labels]="pieChartLabels" 
+    [chartType]="pieChartType"
+    [options]="pieChartOptions"
+    [plugins]="pieChartPlugins"
+    [legend]="pieChartLegend"
+    (chartClick)="onChartClick($event)" #mychart>
+  </canvas>
+</div>

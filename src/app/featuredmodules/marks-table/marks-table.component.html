@@ -1,0 +1,188 @@
+<table class="table table-hover" *ngIf='fisVisible'>
+  <thead>
+    <div class="tableparent">
+      <tr>
+        <table class="table1">
+          <tr>
+            <th>First Grade details</th>
+          </tr>
+          <tr>
+            <th>Student Name</th>
+            <th>Age</th>
+            <th>Email</th>
+          </tr>
+          <ng-container *ngFor="let domain of firstGrades; let i = index">
+            <tr>
+              <td>
+                <input type="text" name = "studentName" class="form-control" [(ngModel)]="domain.studentName" />
+              </td>
+              <td>
+                <input type="number" class="form-control" [(ngModel)]="domain.age" />
+              </td>
+              <td>
+                <input type="email" pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" class="form-control" [(ngModel)]="domain.email" />
+              </td>
+            </tr>
+          </ng-container>
+
+        </table>
+      </tr>
+      <tr>
+        <table class="table2">
+          <tr>
+            <th>Marks out of 100</th>
+          </tr>
+          <tr>
+            <th>English</th>
+            <th>Maths</th>
+            <th>Social studies</th>
+          </tr>
+
+          <ng-container *ngFor="let domain of firstGrades; let i = index">
+
+            <tr *ngFor="let subdomain of domain.marks;">
+              <td>
+                <input type="number" class="form-control" [(ngModel)]="subdomain.English" />
+              </td>
+              <td>
+                <input type="number" class="form-control" [(ngModel)]="subdomain.Maths" />
+              </td>
+              <td>
+                <input type="number" class="form-control" [(ngModel)]="subdomain.Socialstudies" />
+              </td>
+            </tr>
+
+          </ng-container>
+        </table>
+      </tr>
+    </div>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+
+<table class="table table-hover" *ngIf='sisVisible'>
+  <thead>
+    <div class="tableparent">
+      <tr>
+        <table class="table1">
+          <tr>
+            <th>Second Grade details</th>
+          </tr>
+          <tr>
+            <th>Student Name</th>
+            <th>Age</th>
+            <th>Email</th>
+          </tr>
+          <ng-container *ngFor="let domain of secondGrades; let i = index">
+            <tr>
+              <td>
+                <input type="text" class="form-control" [(ngModel)]="domain.studentName" />
+              </td>
+              <td>
+                <input type="number" class="form-control" [(ngModel)]="domain.age" />
+              </td>
+              <td>
+                <input type="text" class="form-control" [(ngModel)]="domain.email" />
+              </td>
+            </tr>
+          </ng-container>
+
+        </table>
+      </tr>
+      <tr>
+        <table class="table2">
+          <tr>
+            <th>Marks out of 100</th>
+          </tr>
+          <tr>
+            <th>English</th>
+            <th>Maths</th>
+            <th>Social studies</th>
+          </tr>
+
+          <ng-container *ngFor="let domain of secondGrades; let i = index">
+
+            <tr *ngFor="let subdomain of domain.marks;">
+              <td>
+                <input type="number" class="form-control" [(ngModel)]="subdomain.English" />
+              </td>
+              <td>
+                <input type="number" class="form-control" [(ngModel)]="subdomain.Maths" />
+              </td>
+              <td>
+                <input type="number" class="form-control" [(ngModel)]="subdomain.Socialstudies" />
+              </td>
+            </tr>
+
+          </ng-container>
+        </table>
+      </tr>
+    </div>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+
+<table class="table table-hover" *ngIf='tisVisible'>
+  <thead>
+    <div class="tableparent">
+      <tr>
+        <table class="table1">
+          <tr>
+            <th>Third Grade details</th>
+          </tr>
+          <tr>
+            <th>Student Name</th>
+            <th>Age</th>
+            <th>Email</th>
+          </tr>
+          <ng-container *ngFor="let domain of thirdGrades; let i = index">
+            <tr>
+              <td>
+                <input type="text" class="form-control" [(ngModel)]="domain.studentName" />
+              </td>
+              <td>
+                <input type="number" class="form-control" [(ngModel)]="domain.age" />
+              </td>
+              <td>
+                <input type="text" class="form-control" [(ngModel)]="domain.email" />
+              </td>
+            </tr>
+          </ng-container>
+
+        </table>
+      </tr>
+      <tr>
+        <table class="table2">
+          <tr>
+            <th>Marks out of 100</th>
+          </tr>
+          <tr>
+            <th>English</th>
+            <th>Maths</th>
+            <th>Social studies</th>
+          </tr>
+
+          <ng-container *ngFor="let domain of thirdGrades; let i = index">
+
+            <tr *ngFor="let subdomain of domain.marks;">
+              <td>
+                <input type="number" class="form-control" [(ngModel)]="subdomain.English" />
+              </td>
+              <td>
+                <input type="number" class="form-control" [(ngModel)]="subdomain.Maths" />
+              </td>
+              <td>
+                <input type="number" class="form-control" [(ngModel)]="subdomain.Socialstudies" />
+              </td>
+            </tr>
+
+          </ng-container>
+        </table>
+      </tr>
+    </div>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
