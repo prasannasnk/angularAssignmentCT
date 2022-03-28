@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ChartType, ChartOptions } from 'chart.js';
-import { SingleDataSet, Label } from 'ng2-charts';
+import { SingleDataSet, Label, Color } from 'ng2-charts';
 import { Router } from '@angular/router';
 import { GradeResultsService } from '../../services/grade-results.service';
 import studentsMarks from '../../json/firstGrade.json';
@@ -61,6 +61,13 @@ export class PieChartComponent implements OnInit {
   public pieChartType: ChartType = 'pie';
   public pieChartLegend = true;
   public pieChartPlugins = [];
+  public colors : Color[] =  [
+    {
+      backgroundColor: [
+        "#ff9900","#77DD77","#97bbcd"
+      ]
+    }
+  ];
 
 
 
