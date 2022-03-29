@@ -58,10 +58,29 @@ export class MarksTableComponent implements OnInit {
 
   }
   ngOnInit(): void {
-    this.fisVisible = true;
+    this.tabletoDisplay();
     this.percentageCalculation();
     this.gradeResults.setData(this.data);
+    
+    
   }
+
+  tabletoDisplay(){
+    if(this.gradeResults.getData() == "First Grade"){
+      this.fisVisible = true;
+    }
+    else if(this.gradeResults.getData() == "Second Grade"){
+      this.sisVisible = true;
+    }
+    else if(this.gradeResults.getData() == "Third Grade"){
+      this.tisVisible = true;
+    }
+    else{
+      this.fisVisible = true;
+    }
+  }
+
+
   percentageCalculation() {
     for (var i = 0; i < this.firstGrades.length; i++) {
       this.firstGrades[i].percentage;
