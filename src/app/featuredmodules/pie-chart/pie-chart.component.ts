@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { ChartType, ChartOptions } from 'chart.js';
-import { SingleDataSet, Label, Color } from 'ng2-charts';
+import { ChartType, ChartOptions} from 'chart.js';
+import { SingleDataSet, Label,Color} from 'ng2-charts';
 import { Router } from '@angular/router';
 import { GradeResultsService } from '../../services/grade-results.service';
 import studentsMarks from '../../json/firstGrade.json';
@@ -51,6 +51,7 @@ export class PieChartComponent implements OnInit {
   thirdGradePercentage: number = 0;
   marks: Mark[] = [];
   marksData: any[] = [this.firstGrades, this.secondGrades, this.thirdGrades];
+  onClickGrade : string ="";
   @ViewChild('mychart') mychart: any;
   public pieChartOptions: ChartOptions = {
     responsive: true,
@@ -61,6 +62,7 @@ export class PieChartComponent implements OnInit {
   public pieChartType: ChartType = 'pie';
   public pieChartLegend = true;
   public pieChartPlugins = [];
+  // public pieChartColors: colo
   public colors : Color[] =  [
     {
       backgroundColor: [
@@ -115,6 +117,10 @@ export class PieChartComponent implements OnInit {
   }
 
   onChartClick = (event: any) => {
+    console.log(event.active[0]._view.label)
+    this.onClickGrade= event.active[0]._view.label;
+    console.log(this.onClickGrade)
+    this.gradeResults.setData(this.onClickGrade)
     this.router.navigateByUrl('grades');
   };
 
